@@ -20,9 +20,9 @@ const HomeScreen = ({ navigation }) => {
     const themeContainerStyle =
         colorScheme === 'light' ? styles.lightContainer : styles.darkContainer;
     return (
-        <View style={styles.container}>
-            <Text style={styles.title}>Welcome to Your App</Text>
-            <Text style={styles.text}>This is the home page.</Text>
+        <View style={[styles.container, themeContainerStyle]}>
+            <Text style={[styles.title,themeTextStyle]}>Welcome to Your App</Text>
+            <Text style={[styles.text, themeTextStyle]}>This is the home page.</Text>
             <CustomButton title="Log Out" onPress={handleLogout} />
         </View>
     );

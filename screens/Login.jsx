@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, useColorScheme } from 'react-native';
-import { StatusBar } from 'expo-status-bar'; // automatically switches bar style based on theme!
 const CustomButton = ({ title, onPress }) => {
 
     return (
