@@ -16,6 +16,13 @@ const HomeScreen = ({ navigation }) => {
     };
     const colorScheme = useColorScheme();
 
+    const handleFeedNavigation = () => {
+        navigation.navigate('Feed'); // Navigate to the "Feed" screen
+    };
+
+    const handleProfileNavigation = () => {
+        navigation.navigate('Profile'); // Navigate to the "Profile" screen
+    };
     const themeTextStyle = colorScheme === 'light' ? styles.lightThemeText : styles.darkThemeText;
     const themeContainerStyle =
         colorScheme === 'light' ? styles.lightContainer : styles.darkContainer;
@@ -23,6 +30,8 @@ const HomeScreen = ({ navigation }) => {
         <View style={[styles.container, themeContainerStyle]}>
             <Text style={[styles.title,themeTextStyle]}>Welcome to Your App</Text>
             <Text style={[styles.text, themeTextStyle]}>This is the home page.</Text>
+            <CustomButton title="Feed" onPress={handleFeedNavigation} />
+            <CustomButton title="Profile" onPress={handleProfileNavigation} />
             <CustomButton title="Log Out" onPress={handleLogout} />
         </View>
     );
